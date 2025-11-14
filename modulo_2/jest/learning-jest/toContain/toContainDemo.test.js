@@ -5,16 +5,16 @@ describe('toContain Matcher',()=>{
         const frutas = obtenerFrutas();
         expect(frutas).toContain('pera');
     })
-    test('Sad path: palabra dentro de texto',()=>{
-        const response = contienePalabra('Jest es super');
-        expect(response).toContain(true)
+    test('Happy path: palabra dentro de texto',()=>{
+        const response = contienePalabra('Jest es super','Jest');
+        expect(response).toBe(true)
     })
     test('Sad path: elemento no encontrado o tipo incorrecto',()=>{
         const frutas = obtenerFrutas();
         expect(frutas).not.toContain('banana')
     })
     test('Sad path: elementos invalidos',()=>{
-        const response = agregarElemento({},'x');
-        expect(response).toThrow('Lista debe ser arreglo')
+        expect(() => agregarElemento({}, 'x')).toThrow('Lista debe ser arreglo');
+
     })
 })

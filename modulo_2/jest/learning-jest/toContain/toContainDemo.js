@@ -5,7 +5,7 @@ function obtenerFrutas(){
 function contienePalabra(texto, palabra){
     if(typeof texto !== 'string' || typeof palabra !== 'string')
         throw new TypeError('Ambos argumentos deben ser string')
-    return texto.toLowerCase().includes(palabra.toLowerCase);
+    return texto.toLowerCase().includes(palabra.toLowerCase());
 }
 
 function agregarElemento(lista, elemento){
