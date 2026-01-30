@@ -1,3 +1,0 @@
-function calcularBonosAntiguedad(anios,salarioBase){
-    
-}
